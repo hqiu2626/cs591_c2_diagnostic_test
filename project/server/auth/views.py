@@ -67,6 +67,3 @@ auth_blueprint.add_url_rule(
     methods=['POST', 'GET']
 )
 
-me = User('hqiu26@gmail.com', '123456')
-db.session.delete(me)
-db.session.commit()
