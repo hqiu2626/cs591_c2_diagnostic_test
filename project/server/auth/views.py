@@ -67,6 +67,3 @@ auth_blueprint.add_url_rule(
     methods=['POST', 'GET']
 )
 
-@auth.blueprint.route("/user/index")
-def show_all():
-    returns user.query.filter(User.email.endswith('@gmail.com')).all()
