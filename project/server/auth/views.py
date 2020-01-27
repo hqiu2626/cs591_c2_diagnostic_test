@@ -67,7 +67,7 @@ auth_blueprint.add_url_rule(
     methods=['POST', 'GET']
 )
 
-@auth_blueprint.route("/user/index")
+@auth_blueprint.route("/users/index")
 def query_all():
     #myUser = User.query.all()
     count = User.query.count()
