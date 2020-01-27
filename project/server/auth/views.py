@@ -67,3 +67,17 @@ auth_blueprint.add_url_rule(
     methods=['POST', 'GET']
 )
 
+@auth_blueprint.route("/user/index")
+def query_all():
+    #myUser = User.query.all()
+    count = User.query.count()
+    string = ""
+    i = 0
+    while (i < (count)):
+        a = User.query.filter(User.email.endswith('')).all()[i].email
+        string += (" " + a)
+        i += 1
+    #b = User.query.filter(User.email.endswith('')).all()[1].email
+    #c = User.query.filter(User.email.endswith('')).all()[2].email
+    #q = db.session.query(User).first()['email']
+    return string
